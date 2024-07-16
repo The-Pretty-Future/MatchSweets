@@ -14,10 +14,12 @@ namespace Common
             var item1WorldPosition = item1.GetWorldPosition();
             var item2WorldPosition = item2.GetWorldPosition();
 
-            await DOTween.Sequence()
+            var sequence = DOTween.Sequence()
                 .Join(item1.Transform.DOMove(item2WorldPosition, SwapDuration))
                 .Join(item2.Transform.DOMove(item1WorldPosition, SwapDuration))
                 .SetEase(Ease.Flash);
+
+            await sequence.AsyncWaitForCompletion();
 
             item1.SetWorldPosition(item2WorldPosition);
             item2.SetWorldPosition(item1WorldPosition);

@@ -27,12 +27,13 @@ namespace FillStrategies.Jobs
             foreach (var itemData in _itemsData)
             {
                 var itemMoveTween = CreateItemMoveTween(itemData);
-                _ = itemsSequence
+                itemsSequence
                     .Join(itemMoveTween)
                     .PrependInterval(itemMoveTween.Duration() * IntervalDuration);
             }
 
-            await itemsSequence.SetDelay(_delay, false).SetEase(Ease.Flash);
+            itemsSequence.SetDelay(_delay, false).SetEase(Ease.Flash);
+            await itemsSequence.AsyncWaitForCompletion();
         }
     }
 }

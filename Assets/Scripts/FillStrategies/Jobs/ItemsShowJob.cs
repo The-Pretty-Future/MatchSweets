@@ -29,10 +29,10 @@ namespace FillStrategies.Jobs
                 item.SpriteRenderer.SetAlpha(1);
                 item.Show();
 
-                _ = itemsSequence.Join(item.Transform.DOScale(Vector3.one, ScaleDuration));
+                itemsSequence.Join(item.Transform.DOScale(Vector3.one, ScaleDuration));
             }
 
-            await itemsSequence.SetEase(Ease.OutBounce);
+            await itemsSequence.AsyncWaitForCompletion();
         }
     }
 }

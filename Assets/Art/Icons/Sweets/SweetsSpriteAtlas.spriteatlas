@@ -31,6 +31,7 @@ SpriteAtlas:
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
       m_Overridden: 0
+      m_IgnorePlatformSupport: 0
       m_AndroidETC2FallbackOverride: 0
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
@@ -40,30 +41,17 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 2800000, guid: b147207d22c7052488bdb56ebcaa34ea, type: 3}
-    - {fileID: 2800000, guid: ebdb441109eb8f44ba4c431242f9eb12, type: 3}
-    - {fileID: 2800000, guid: 842ad060401c3dc4884a1a540983b89c, type: 3}
-    - {fileID: 2800000, guid: 3191b4cbf5c345d47aa82e62de03a0d7, type: 3}
-    - {fileID: 2800000, guid: da0b36d6e59739346886be3510f60480, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys: []
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 21300000, guid: 842ad060401c3dc4884a1a540983b89c, type: 3}
-  - {fileID: 21300000, guid: ebdb441109eb8f44ba4c431242f9eb12, type: 3}
-  - {fileID: 21300000, guid: da0b36d6e59739346886be3510f60480, type: 3}
-  - {fileID: 21300000, guid: 3191b4cbf5c345d47aa82e62de03a0d7, type: 3}
-  - {fileID: 21300000, guid: b147207d22c7052488bdb56ebcaa34ea, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - Donut
-  - Brownie
-  - Cupcake
-  - Cookie
-  - Cake
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: SweetsSpriteAtlas
   m_IsVariant: 0

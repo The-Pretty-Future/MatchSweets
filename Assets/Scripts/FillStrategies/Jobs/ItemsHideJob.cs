@@ -25,12 +25,12 @@ namespace FillStrategies.Jobs
 
             foreach (var item in _items)
             {
-                _ = itemsSequence
+                itemsSequence
                     .Join(item.Transform.DOScale(Vector3.zero, ScaleDuration))
                     .Join(item.SpriteRenderer.DOFade(0, FadeDuration));
             }
 
-            await itemsSequence;
+            await itemsSequence.AsyncWaitForCompletion();
 
             foreach (var item in _items)
             {
